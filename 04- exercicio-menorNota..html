@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+            <!--js-->
+            <script>
+
+                //função verificar
+                function acao(){
+                    var nota1 = parseFloat(document.getElementById("nota1").value)
+                    var nota2 = parseFloat(document.getElementById("nota2").value)
+                    var nota3 = parseFloat(document.getElementById("nota3").value)
+
+                    var menor
+
+                    if(nota1 <nota2 && nota1 <nota3 ){
+                        menor = nota1
+                    }else if(nota2 < nota1 && nota2 < nota3){
+                        menor = nota2
+                    }else{
+                        menor =nota3
+                    }
+
+                    //mensagem
+                    document.getElementById("mensagem").innerHTML= "menor nota é " + menor
+                        
+
+                }
+
+
+
+            </script>
+
+
+
+<body>
+    	<form>
+			<input type="text" placeholder=" digite nota 1..." id="nota1">
+			<input type="text" placeholder=" digite nota 2..." id="nota2">
+			<input type="text" placeholder=" digite nota 3..." id="nota3">
+			
+			<input type="button"  value="enviar" onclick="acao()"> 
+		
+
+			<h1 id="mensagem"></h1>
+        </form>
+    
+</body>
+</html>

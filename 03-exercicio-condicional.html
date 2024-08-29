@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <!--JS-->
+    <script>
+
+        //função calcular
+        function calcular(){
+
+            //coletar dados
+             var produto = document.getElementById("produto").value
+             var valor =parseFloat(document.getElementById("valor").value)
+             var pagamento = document.getElementById("pagamento").value
+             
+
+             //verificar se terá desconto
+
+             var total 
+             if( pagamento == 1){
+                total = valor * 0.9
+             } else if(pagamento == 2){
+                total = valor * 1.1
+             }
+
+             //mensagem
+
+             document.getElementById("mensagem").innerHTML= " Total a pagar R$ " + total.toFixed(2) 
+        }
+
+
+    </script>
+
+
+<body>
+    
+    <!--Formulario-->
+    <form >
+        <input type="text" placeholder="produto" id="produto">
+        <input type="text" placeholder="valor" id="valor">
+
+        <select  id="pagamento">
+
+            <option value="0">Forma de pagamento</option>
+            <option value="1">À vista</option>
+            <option value="2">À prazo</option>
+            
+        </select>
+
+        <button type="button" onclick="calcular()"> Calcular</button>
+
+        <h1 id="mensagem"></h1>
+
+
+    </form>
+
+
+    
+</body>
+</html>

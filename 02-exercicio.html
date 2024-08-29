@@ -8,7 +8,49 @@
 
 <!--JS-->
 
+    <script>
+
+        //função acao
+        function acao(){
+
+            //captura de dados
+            var nota1 = parseFloat(document.getElementById("nota1").value)
+            var nota2 = parseFloat(document.getElementById("nota2").value)
+            var nota3 = parseFloat(document.getElementById("nota3").value)
+
+            //media
+            var media = (nota1+nota2+nota3)/3
+
+
+             //situação
+
+            var situacao = "Aprovado"
+             if(media>=5 && media <=6,9){
+                situacao= " em Analise"
+            }
+            else if(media >= 0 && media <=4,9){
+                situacao="Reprovado"
+            }
+
+            //mensagem
+            document.getElementById("mensagem").innerHTML= situacao + " com media " + media
+        }
+
+
+
+    </script>
+
 <body>
- 
+        <!--Formulario-->
+        <form action="">
+            <input type="text" placeholder="digite nota1..." id="nota1">
+            <input type="text" placeholder="digite nota2..." id="nota2">
+            <input type="text" placeholder="digite nota3..." id="nota3">
+            <button type="button" onclick="acao()">Calcular</button>
+        </form>
+    
+        <!--mensagem-->
+        <h1 id="mensagem"></h1>
+
 </body>
 </html>
