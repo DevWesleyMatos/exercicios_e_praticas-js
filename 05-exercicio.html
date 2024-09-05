@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!--JS-->
+
+<script>
+    //função acao
+
+    function acao(){
+
+        //coleta de dados
+
+        var nota1 = parseFloat(document.getElementById("nota1").value)
+        var nota2 = parseFloat(document.getElementById("nota2").value)
+        var nota3 = parseFloat(document.getElementById("nota3").value)
+        var nota4 = parseFloat(document.getElementById("nota4").value)
+
+        //condiconal
+
+        var verificar
+        if(nota1 == nota2 && nota2 == nota3 && nota3 == nota4){
+            verificar="Quadrado Perfeito"
+        }else{
+            verificar="Não é um Quadrado perfeito"
+        }
+
+        //mensagem
+
+        document.getElementById("mensagem").innerHTML= "Resultado é: "+ verificar
+    }
+
+
+
+
+</script>
+
+
+<body>
+    
+    <!--Formulario-->
+    <form >
+        <input type="text" placeholder="Digite um numero" id="nota1">
+        <input type="text" placeholder="Digite um numero" id="nota2">
+        <input type="text" placeholder="Digite um numero" id="nota3">
+        <input type="text" placeholder="Digite um numero" id="nota4">
+        <input type="button" value="verificar" onclick="acao()">
+        
+        <h1 id="mensagem"></h1>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <!--JS-->
+    <script>
+        //função acao
+        function acao(){
+
+            //coleta de dados
+            var number1 = parseFloat(document.getElementById("number1").value)
+
+            //Laço for
+
+            var variavel = 0
+
+            //Laço for
+            /*
+            for (variavel = 0; variavel < 11 ; variavel++) {
+                document.getElementById("mensagem").innerHTML += variavel * number1 +"<br>"
+                
+            }
+            */
+
+            //Laço While
+            /*
+           while (variavel < 11) {
+            document.getElementById("mensagem").innerHTML += variavel * number1 +"<br>"
+            variavel ++
+           }
+           */
+
+           do {
+            document.getElementById("mensagem").innerHTML += variavel * number1 +"<br>"
+            variavel++
+            
+           } while (variavel < 11);
+
+        }
+    </script>
+
+
+
+<body>
+
+    <!--Formulario-->
+    <form>
+        <input type="number" placeholder="digite um numero" id="number1">
+        <input type="button" value="calcular" onclick="acao()">
+    </form>
+    <h1 id="mensagem"></h1>
+</body>
+</html>
