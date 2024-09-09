@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!--JS-->
+<script>
+    //função acao
+    function acao(){
+
+        //coleta de dados
+        var valor1 = parseFloat(document.getElementById("valor1").value)
+        var valor2 = parseFloat(document.getElementById("valor2").value) 
+
+        //logica
+        while(valor1 <=valor2){
+            document.getElementById("mensagem").innerHTML += valor1 + " "
+            valor1++
+
+        }
+    }
+
+
+
+
+
+
+
+</script>
+
+
+<body>
+<!--Formulario-->
+    <form>
+        <input type="text" placeholder="Digite valor1" id="valor1">
+        <input type="text" placeholder="Digite valor2" id="valor2">
+        <input type="button" value="enviar" onclick="acao()">
+    </form>
+    
+    <!--Mensagem-->
+    <h1 id="mensagem"></h1>
+
+</body>
+</html>

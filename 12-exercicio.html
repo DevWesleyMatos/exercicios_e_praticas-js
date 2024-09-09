@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <!--JS-->
+    <script>
+
+        //Fução acao
+        function acao(){
+    
+            //vetor
+            var numeros = []
+
+            //armazenamento vetor
+
+            numeros.push(parseFloat(document.getElementById("nota1").value))
+            numeros.push(parseFloat(document.getElementById("nota2").value))
+            numeros.push(parseFloat(document.getElementById("nota3").value))
+            numeros.push(parseFloat(document.getElementById("nota4").value))
+
+            //condicional
+            var existe = false
+            for (let index = 0; index < 5; index++) {
+                if(numeros[index] == 10){
+                    existe = true
+                }
+                
+            }
+
+            //mensagem
+            if (existe == false){
+                document.getElementById("mensagem").innerHTML = "number 10 no exist"
+            }else{
+                for (let index = 0; index < 5; index++) {
+                    if(numeros[index] ==10){
+                        document.getElementById("mensagem").innerHTML = "existe o 10 na posição " + (index+1)  
+                    }
+                    
+                }
+            }
+        }
+    </script>
+        
+
+<body>
+
+   <!--Formulario-->
+   <form>
+    <input type="text" placeholder="Digite um numero" id="nota1">
+    <input type="text" placeholder="Digite um numero" id="nota2">
+    <input type="text" placeholder="Digite um numero" id="nota3">
+    <input type="text" placeholder="Digite um numero" id="nota4">
+    <input type="button" value="Verificar" onclick="acao()">
+</form>
+
+<h1 id="mensagem"></h1> 
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <!--JS-->
+    <script>
+
+        //função
+        function acao() {
+            //coleta de dados
+
+            var nome1 = document.getElementById("nome1").value
+            var nome2 = document.getElementById("nome2").value
+            var nome3 = document.getElementById("nome3").value
+
+            //vetor
+            var nomes = []
+
+            //Armazenamento
+            nomes.push(document.getElementById("nome1").value)
+            nomes.push(document.getElementById("nome2").value)
+            nomes.push(document.getElementById("nome3").value)
+
+            //exibir
+
+            document.getElementById("mensagem").innerHTML = nomes
+        }
+
+
+
+    </script>
+
+
+
+<body>
+
+    <!--Formulario-->
+    <form >
+        <input type="text" placeholder="Digite um nome" id="nome1">
+        <input type="text" placeholder="Digite um nome" id="nome2">
+        <input type="text" placeholder="Digite um nome" id="nome3">
+        <input type="button" value="Verificar" onclick="acao()">
+    </form>
+
+    <h1 id="mensagem"></h1>
+    
+</body>
+</html>

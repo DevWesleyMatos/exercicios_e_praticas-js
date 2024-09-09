@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!--JS-->
+<script>
+
+    //Função acao
+    function acao(){
+        //coleta de dados
+        var valor1 =parseFloat(document.getElementById("valor1").value)
+        var valor2 =parseFloat(document.getElementById("valor2").value)
+
+
+        //contadores
+
+        var positivo = 0
+        var negativo = 0
+        var pares = 0
+        var impares = 0
+
+
+        //logica
+
+        while (valor1<=valor2) {
+
+            //par ou impar
+            if (valor1 % 2 ==0) {
+
+                pares++
+                
+            }else{
+
+                impares++
+
+            }
+
+            //positivo ou negativo
+
+            if (valor1>= 0) {
+                positivo++
+                
+            }else{
+                negativo++
+            }
+
+            valor1++
+            
+        }
+        //mensagem
+        document.getElementById("mensagem").innerHTML+= "pares"+ pares
+        document.getElementById("mensagem").innerHTML+= "<br>impares"+ impares
+        document.getElementById("mensagem").innerHTML+= "<br>positivo"+ positivo
+        document.getElementById("mensagem").innerHTML+= "<br>negativo"+ negativo
+        
+    }
+
+</script>
+
+
+<body>
+    
+        <!--Formulario-->
+            <form>
+                <input type="text" placeholder="Digite valor1" id="valor1">
+                <input type="text" placeholder="Digite valor2" id="valor2">
+                <input type="button" value="enviar" onclick="acao()">
+            </form>
+            
+            <!--Mensagem-->
+            <h1 id="mensagem"></h1>
+        
+       
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <!--JS-->
+    <Script>
+
+        //função acao
+        function acao(){
+
+            //coleta de dados
+            var nota1 = parseFloat(document.getElementById("nota1").value)
+
+            var antercessor = -10
+            var sucesssor = 10
+
+            //logica
+            while(antercessor<=sucesssor){
+                document.getElementById("mensagem").innerHTML += antercessor + " "
+                antercessor++
+            }
+
+        }
+
+
+    </Script>
+
+
+<body>
+    <!--Formulario-->
+            <input type="text" placeholder=" digite nota 1..." id="nota1">
+			
+			<button onclick="acao()"> Verificar</button>
+		
+
+			<h1 id="mensagem"></h1>
+</body>
+</html>
