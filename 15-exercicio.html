@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <!--JS-->
+    <script>
+
+        //vetor
+        var nomes = []
+
+        //função pesquisar
+        function pesquisar() {
+            
+            //coleta de dados
+            var nome = document.getElementById("nome").value
+
+            //verificar se nome está no vetor
+            var existe = false
+            for (let index = 0; index < nomes.length; index++) {
+               if (nome.toLowerCase() ==nomes[index].toLowerCase()) {
+                    existe= true   
+                }  
+            }
+
+            //verificar se será cadastrado
+            if (existe == false) {
+                nomes.push(nome)
+               }else{
+                alert("Nome já existe")
+               }
+
+            //exibir mensagem
+            document.getElementById("mensagem").innerHTML = nomes
+
+        }
+    </script>
+<body>
+    <!--Formulario-->
+    <form>
+        <input type="text" placeholder="Digite seu nome" id="nome">
+        <input type="button" value="Pesquisar" onclick="pesquisar()">
+    </form>
+
+    <h1 id="mensagem"></h1>
+</body>
+</html>
